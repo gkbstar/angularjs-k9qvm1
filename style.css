@@ -1,3 +1,67 @@
-h1, p {
+h1,
+h2,
+p {
   font-family: Lato;
+  color: gray;
+}
+
+.checkbox {
+  background: aqua;
+}
+
+table,
+th,
+td {
+  border-collapse: collapse;
+}
+
+.heading {
+  border-collapse: collapse;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+input[type='text'] {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-width: 0 0 2px;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type='checkbox']:before {
+  content: '';
+  display: block;
+  width: 10px;
+  height: 10px;
+  top: 0;
+  left: 0;
+  border: 2px solid #555555;
+  border-radius: 3px;
+  background-color: white;
+}
+input[type='checkbox']:checked:after {
+  content: '';
+  display: block;
+  width: 5px;
+  height: 10px;
+  border: solid black;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  left: 6px;
+}
+
+.buttonSubmit {
+  background-color: #4f98d4; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
 }

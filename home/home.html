@@ -1,4 +1,44 @@
-<h1>Hello {{$ctrl.name}}!</h1>
-<p>
-  Start editing <b>home/home.html</b> :)
-</p>
+<h1>Candidates</h1>
+
+<input class="checkbox" type="checkbox" name="checkboxgender" value="male" ng-model="checkboxmalefilter" ng-change="clearFilter()">Male</input>
+<input class="checkbox" type="checkbox" name="checkboxgender" value="female" ng-model="checkboxfemalefilter" ng-change="clearFilter()">Female</input>
+<input type="text" placeholder="Whom you are looking for?" ng-model="search[filter]" />
+
+<table>
+  <tr>
+    <th class="heading">#</th>
+    <th class="heading">First Name</th>
+    <th class="heading">Last Name</th>
+    <th class="heading">Email</th>
+    <th class="heading">Gender</th>
+  </tr>
+  <tr ng-repeat="x in candidates">
+    <td>{{ x.id }}</td>
+    <td>{{ x.first_name }}</td>
+    <td>{{ x.last_name }}</td>
+    <td>{{ x.email }}</td>
+    <td>{{ x.gender }}</td>
+  </tr>
+</table>
+
+<h2>Add New Candidate</h2>
+<form>
+  <input type="text" ng-model="candidate.firstname" placeholder="First Name"/>
+  <input type="text" ng-model="candidate.lastname" placeholder="Last Name"/>
+  <input type="text" ng-model="candidate.email" placeholder="Email"/>
+  <br />
+  <input
+    value="male"
+    type="radio"
+    name="gender"
+    ng-model="candidate.gender"
+  />Male
+
+  <input
+    value="female"
+    type="radio"
+    name="gender"
+    ng-model="candidate.gender"
+  />Female
+  <input class="buttonSubmit" type="button" value="Add" />
+</form>
